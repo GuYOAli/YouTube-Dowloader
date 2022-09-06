@@ -14,3 +14,11 @@ print("Length of video: ", yt_link.length, " mintues")
 print("Description: ", yt_link.description)
 # Rating
 print("Ratings: ", yt_link.rating)
+
+# getting highest stream
+
+youtube_stream = yt_link.streams.get_highest_resolution()
+
+# finally downloading the video
+
+youtube_stream.download()
